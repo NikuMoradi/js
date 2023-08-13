@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="title">Exercise</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://fonts.googleapis.com/css?family=DM Sans' rel='stylesheet'>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div ondragover="dragOverHandler(event)" ondrop="onDropHandler(event)" class="status" id="no-status">
+            <h1>No Status</h1>
+            <button id="add-btn"> + Add Todo </button>
+            <div draggable="true" ondragstart="dragStartHandler(event)" id="workout" class="todo">Workout
+                <span class="remove">&times;</span>
+            </div>
+            <div draggable="true" ondragstart="dragStartHandler(event)" id="English" class="todo">English
+                <span class="remove">&times;</span>
+            </div>
+        </div>
+
+        <div ondragover="dragOverHandler(event)" ondrop="onDropHandler(event)" class="status" id="not-started">
+            <h1>Not Started</h1>
+            <div draggable="true" ondragstart="dragStartHandler(event)" id="Css" class="todo">Css
+                <span class="remove">&times;</span>
+            </div>
+        </div>
+        <div ondragover="dragOverHandler(event)" ondrop="onDropHandler(event)" class="status" id="in-progress">
+            <h1>In Progress</h1>
+
+        </div>
+        <div ondragover="dragOverHandler(event)" ondrop="onDropHandler(event)" class="status" id="completed">
+            <h1>Completed</h1>
+        </div>
+
+
+    </div>
+    <div class="modal">
+        <div class="header">
+            <h3>Add Todo</h3>
+            <span id="close-modal">&times;</span>
+        </div>
+        <div class="body">
+            <input id="modal-input" type="text" placeholder="Something here..">
+            <input id="modal-btn" type="submit" value="Add Todo To List" />
+        </div>
+    </div>
+
+    <script src="./js.js"></script>
+</body>
+
+</html>
