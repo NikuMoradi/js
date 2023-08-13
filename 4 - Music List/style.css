@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin:20px;
+    min-height: 100vh;
+    background: #c9ced3;
+    font-family:Nunito ;
+    font-size: 12px;
+
+}
+h1{
+    display: block;
+    text-align: center;
+    font-size: 40px;
+}
+.container{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+
+
+}
+.music-box{
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+img{
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    transition: all .4s ease;
+
+}
+img:hover{
+    transform: translateY(-10px);
+
+}
+.fa-play{
+    position: absolute;
+    background: red;
+    color: aliceblue;
+    font-size: 40px;
+    padding:15px 30px;
+    border-radius: 10px;
+    visibility: hidden;
+}
+.music-box:hover i{
+    visibility: visible;
+}
