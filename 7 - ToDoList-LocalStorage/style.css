@@ -143,7 +143,7 @@ li:hover{
     color: white;
     font-size:1vw;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3); 
-    margin-right: px; 
+    margin-right: 7px; 
     cursor: pointer;
 }
 
@@ -169,4 +169,12 @@ li:hover{
 .status-btn:hover,
 .delete-btn:hover{
     background-color: black;
+}
+
+.completed{
+    color:#cdcaca;
+    text-decoration: line-through;
+    width: 7.5vw;
+
+
 }
