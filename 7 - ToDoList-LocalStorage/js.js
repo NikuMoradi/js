@@ -96,10 +96,7 @@ function todosGenerator(todosList) {
         newStatusBtn.value = 'Complete'
         newStatusBtn.setAttribute('onclick', 'changeStatusTodo(' + todo.id + ')')
 
-        if (todo.complete) {
-            newStatusBtn.value = 'UnCompleted'
-            newStatusBtn.classList += ' completed'
-        }
+
 
         let newDeleteBtn = $.createElement('input')
         newDeleteBtn.classList.add('delete-btn')
@@ -110,6 +107,11 @@ function todosGenerator(todosList) {
         let newTodoSpan = $.createElement('span')
         newTodoSpan.classList.add('span')
         newTodoSpan.innerHTML = todo.title
+
+        if (todo.complete) {
+            newStatusBtn.value = 'UnCompleted'
+            newTodoSpan.classList += ' completed'
+        }
 
         newBtnsDiv.append(newStatusBtn, newDeleteBtn)
         newLi.append(newTodoSpan, newBtnsDiv)
